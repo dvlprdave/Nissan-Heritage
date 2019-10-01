@@ -35,8 +35,8 @@ function init() {
     const nextText = nextPage.querySelectorAll('.details')
     const portfolio = document.getElementById('portfolio')
 
-    // TimeLineMax
-    /*  */
+    /* ----------------------------- TimeLineMax / Page Dot Animations----------------------------- */
+
     const timeLine = new TimelineMax()
 
     timeLine
@@ -68,7 +68,7 @@ function init() {
 
   // Don't execute more than once every 1400ms
   document.addEventListener('wheel', throttle(scrollChange, 1400))
-  document.addEventListener('touchmove', throttle(scrollChange, 1400))
+  document.addEventListener('touchmove', throttle(scrollChange, 1400)) // allow on mobile
 
   function switchDots(dotNumber) {
     const activeDot = document.querySelectorAll('.slide')[dotNumber]
@@ -95,7 +95,11 @@ function init() {
     nextSlide(scrollSlide)
   }
 
-  // Throttling makes it so a function is called a set number of times over a given period. 
+  /**************************************
+   Throttling makes it so a function is 
+   called a set number of times over a 
+   given period. 
+  ****************************************/
   function throttle(func, limit) {
     let inThrottle
     return function () {
@@ -109,22 +113,32 @@ function init() {
     }
   }
 
-  // Hamburger
+  /* ------------------------------ Hamburger ------------------------------ */
+
   const hamburger = document.querySelector('.menu')
   const hamburgerLines = document.querySelectorAll('.menu line')
   const navOpen = document.querySelector('.nav-open')
   const contact = document.querySelector('.contact')
   const social = document.querySelector('.social')
-  const logo = document.querySelector('.logo')
+  const logo = document.getElementById('logo')
 
   const timeLine = new TimelineMax({ paused: true, reversed: true })
   timeLine.to(navOpen, 0.5, { y: 0 })
-    .fromTo(contact, 0.5, { opacity: 0, y: 10 }, { opacity: 1, y: 0 })
+    .fromTo(contact, 0.5, { opacity: 0, y: 10 }, { opacity: 1, y: 0 }, "-=0.1")
+    .fromTo(social, 0.5, { opacity: 0, y: 10 }, { opacity: 1, y: 0 }, "-=0.5")
+    .fromTo(logo, 0.2, { color: "white" }, { color: "black" }, "-=1")
+    .fromTo(
+      hamburgerLines,
+      0.2,
+      { stroke: "white" },
+      { stroke: "black" },
+      "-=1"
+    )
 
   hamburger.addEventListener('click', () => {
-    timeLine.reverse()
-      ? timeLine.play() :
-      timeLine.reverse()
+    timeLine.reversed()
+      ? timeLine.play()
+      : timeLine.reverse()
   })
 }
 
