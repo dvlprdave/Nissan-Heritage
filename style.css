@@ -1,3 +1,7 @@
+:root {
+  --vertical-padding: 1.2rem 0;
+}
+
 *,
 *::before,
 *::after {
@@ -156,21 +160,8 @@ nav {
 }
 
 /* -------------------------------------------------------------------------- */
-/*                                About Styles                                */
+/*                                Car Page Styles                                */
 /* -------------------------------------------------------------------------- */
-
-#banner {
-  height: 50vh;
-  width: 100%;
-  position: relative;
-}
-
-#banner-img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  object-position: top;
-}
 
 .author {
   position: absolute;
@@ -191,13 +182,21 @@ nav {
   padding: 10px 0;
 }
 
-.story, 
+ 
+.story,
 .my-work {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  align-items: center;
   width: 90%;
   margin: auto;
   padding: 80px 0px;
+}
+
+#story-img {
+  margin-left: 2rem;
+  align-self: flex-end;
+  padding: var(--vertical-padding);
 }
 
 .story-description,
@@ -214,13 +213,14 @@ nav {
 .story-description p,
 .work-description p {
   font-size: 20px;
-  padding: 20px 0;
+  padding: var(--vertical-padding);
 }
 
 #work-gallery {
   display: grid;
   grid-template-columns: repeat(3, 200px);
   align-content: end;
+  margin-right: 3rem;
 }
 
 #work-gallery img {
