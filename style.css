@@ -1,5 +1,8 @@
 :root {
   --vertical-padding: 1.2rem 0;
+  --horizontal-padding: 0 1.2rem;
+  --base-padding: 1.2rem;
+  --width: 1600px;
 }
 
 *,
@@ -22,6 +25,12 @@
 
 body {
   font-family: PopLight;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 #portfolio {
@@ -163,68 +172,129 @@ nav {
 /*                                Car Page Styles                                */
 /* -------------------------------------------------------------------------- */
 
-.author {
-  position: absolute;
-  color: white;
-  top: 70%;
-  left: 50%;
-  transform: translate(-50%, -70%);
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-  text-align: center;
+
+#car-history_wrapper {
+  background: black;
+  padding: 3rem;
 }
 
-.author h1 {
-  font-size: 42px;
-}
-
-.author h3 {
-  font-size: 32px;
-  padding: 10px 0;
-}
-
- 
-.story,
-.my-work {
-  display: flex;
-  justify-content: space-evenly;
+.car-history {
+  display: grid;
+  grid-template-columns: max-content max-content 1fr 1fr;
+  grid-gap: 2rem;
+  justify-content: center;
+  justify-items: end;
   align-items: center;
-  width: 90%;
+
+  padding: var(--base-padding);
   margin: auto;
-  padding: 80px 0px;
+  color: white;
+  max-width: var(--width);
 }
 
-#story-img {
-  margin-left: 2rem;
-  align-self: flex-end;
+.grid-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.car-year {
+  grid-column: 1;
+  grid-row: 1;
+  align-self: start;
+  justify-self: end;
+  
+  font-size: 2.6rem;
+  font-weight: 800;
+  writing-mode: vertical-rl;
+  color: white;
+  margin-top: 2.2em;
+  z-index: 99;
+}
+
+#car-history_img {
+  grid-column: 2 / span 2;
+  grid-row: 1;
+  justify-self: stretch;
+}
+
+.overlay {
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
+  justify-self: center;
+  align-self: end;
+  width: 300px;
+}
+
+
+.car-bio {
+  grid-column: 4 / 6;
+}
+
+.car-bio p,
+.racing-description p {
+  /* font-size: 1.2rem; */
+  font-size: 3vvw;
   padding: var(--vertical-padding);
 }
 
-.story-description,
-.work-description {
-  width: 50%;
-}
-
-.story-description h3,
-.work-description h3 {
-  font-size: 36px;
+.car-bio__heading,
+.racing-description_heading {
+  font-size: 2.3rem;
   padding-bottom: 30px;
 }
 
-.story-description p,
-.work-description p {
-  font-size: 20px;
-  padding: var(--vertical-padding);
-}
-
-#work-gallery {
+.racing-history {
   display: grid;
-  grid-template-columns: repeat(3, 200px);
-  align-content: end;
-  margin-right: 3rem;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1.2rem;
+  justify-content: center;
+  max-width: var(--width);
+
+  /* padding: 80px 0; */
+  padding: var(--base-padding);
+  margin: auto;
+  width: 100%;
 }
 
-#work-gallery img {
-  width: 100%;
+#racing-history_img {
+  align-self: center;
+  justify-self: center;
+}
+
+iframe {
+  grid-column: 2;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                Media Queries                               */
+/* -------------------------------------------------------------------------- */
+
+
+/* ----------------------- Moves .car-year with images ---------------------- */
+
+@media screen and (max-width: 1286px ) {
+  .car-year {
+    margin-top: 2.8em;
+  }
+}
+
+@media screen and (max-width: 1237px ) {
+  .car-year {
+    margin-top: 3.5em;
+  }
+}
+
+@media screen and (max-width: 1166px ) {
+  .car-year {
+    margin-top: 4em;
+  }
+}
+
+@media screen and (max-width: 1104px ) {
+  .car-year {
+    margin-top: 4.8em;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -236,7 +306,7 @@ nav {
 
   .hero {
     height: auto;
-    grid-column: 2/3;
+    grid-column: 2;
   }
 
   .hero img {
@@ -245,7 +315,7 @@ nav {
 
   .details {
     grid-row: 2/3;
-    grid-column: 2/3;
+    grid-column: 2;
     text-align: center;
     
   }
@@ -258,19 +328,49 @@ nav {
     font-size: 38px;
   }
 
-  .story, .my-work {
-    flex-direction: column;
-  }
-
-  .story-description,
-  .work-description {
-    width: 100%;
-  }
-
-  #work-gallery {
+  .car-history {
     display: grid;
-    grid-template-columns: repeat(auto-fit, min(300px, 1fr));
-    justify-content: center;
+    grid-template-columns: 1fr;
+    /* padding: var(--vertical-padding) var(--horizontal-padding); */
+  }
+
+  .car-year {
+    writing-mode: horizontal-tb;
+    font-size: 2rem;
+    justify-self: center;
+    margin: 0;
+  }
+
+  #car-history_img {
+    grid-row: 2;
+    grid-column: 1;
+    justify-self: center;
+  }
+
+  .overlay,
+  .car-bio {
+    grid-column: 1;
+  }
+
+  .overlay {
+    grid-row: 4;
+  }
+
+  .car-bio {
+    grid-row: 3 / 4;
+    padding: var(--base-padding);
+  }
+
+  .racing-history {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    padding: 2.4rem;
+  }
+
+  .car-bio p,
+  .racing-description p {
+    font-size: 1rem;
   }
 
   .profile {
@@ -281,7 +381,16 @@ nav {
 
 @media screen and (max-width: 768px) {
   .page {
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 100%;
+  }
+
+  .page-1 h3 {
+    font-size: 18px;
+    padding-right: 20px;
+  }
+
+  .slide {
+    width: 9px;
   }
 
   .hero img {
@@ -294,6 +403,19 @@ nav {
 
   .details h2 {
     font-size: 28px;
+  }
+}
+
+/* -------------------- Narrow Mobile Screens (Galaxy s9) ------------------- */
+
+@media screen and (max-width: 375px) {
+  .page-1 h3 {
+    font-size: 16px;
+    padding-right: 10px;
+  }
+
+  .slide {
+    width: 7px;
   }
 }
 
