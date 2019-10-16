@@ -180,7 +180,7 @@ nav {
 
 .car-history {
   display: grid;
-  grid-template-columns: max-content max-content 1fr 1fr;
+  grid-template-columns: min-content min-content 1fr 1fr;
   grid-gap: 2rem;
   justify-content: center;
   justify-items: end;
@@ -226,7 +226,6 @@ nav {
   width: 300px;
 }
 
-
 .car-bio {
   grid-column: 4 / 6;
 }
@@ -251,7 +250,6 @@ nav {
   justify-content: center;
   max-width: var(--width);
 
-  /* padding: 80px 0; */
   padding: var(--base-padding);
   margin: auto;
   width: 100%;
@@ -262,9 +260,9 @@ nav {
   justify-self: center;
 }
 
-iframe {
+/* iframe {
   grid-column: 2;
-}
+} */
 
 /* -------------------------------------------------------------------------- */
 /*                                Media Queries                               */
@@ -321,11 +319,7 @@ iframe {
   }
 
   .details h1 {
-    font-size: 48px;
-  }
-
-  .details h1 {
-    font-size: 38px;
+    font-size: 2.375rem;
   }
 
   .car-history {
@@ -336,7 +330,7 @@ iframe {
 
   .car-year {
     writing-mode: horizontal-tb;
-    font-size: 2rem;
+    font-size: 1.5rem;
     justify-self: center;
     margin: 0;
   }
@@ -385,7 +379,7 @@ iframe {
   }
 
   .page-1 h3 {
-    font-size: 18px;
+    font-size:  1.125rem;
     padding-right: 20px;
   }
 
@@ -397,10 +391,6 @@ iframe {
     height: 300px;
   }
 
-  .details h1 {
-    font-size: 38px;
-  }
-
   .details h2 {
     font-size: 28px;
   }
@@ -410,7 +400,7 @@ iframe {
 
 @media screen and (max-width: 375px) {
   .page-1 h3 {
-    font-size: 16px;
+    font-size: 1rem;
     padding-right: 10px;
   }
 
@@ -418,6 +408,8 @@ iframe {
     width: 7px;
   }
 }
+
+/* ------------------------------- Navigation ------------------------------- */
 
 .nav-open {
   display: grid;
@@ -438,22 +430,28 @@ iframe {
 }
 
 .nav-open h3 {
-  font-size: 28px;
+  font-size: 1.75rem;
   padding-bottom: 40px;
 }
 
 .nav-open a {
   text-decoration: none;
   color: inherit;
-  font-size: 18px;
+  font-size: 1.125rem;
 }
 
 .contact {
   grid-column: 2/3;
 }
 
+#social-links {
+  display: flex;
+  cursor: pointer;
+}
+
 #social-links img {
   padding: 0px 10px;
+
 }
 
 #logo,

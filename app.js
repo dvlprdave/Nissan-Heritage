@@ -35,7 +35,7 @@ function init() {
     const nextText = nextPage.querySelectorAll('.details')
     const portfolio = document.getElementById('portfolio')
 
-    /* ------ TimeLineMax / Page Dot Animations ------ */
+    /* -------------------- TimeLineMax / Page Dot Animations ------------------- */
 
     const timeLine = new TimelineMax()
 
@@ -113,7 +113,7 @@ function init() {
     }
   }
 
-  /* ------ Hamburger ------ */
+  /* -------------------------------- Hamburger ------------------------------- */
 
   const hamburger = document.querySelector('.menu')
   const hamburgerLines = document.querySelectorAll('.menu line')

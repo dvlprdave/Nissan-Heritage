@@ -12,12 +12,37 @@
 <body>
   <main>
     <div id="car-history_wrapper">
+      <!-- Nav -->
+      <nav>
+        <h3 id="logo">Nissan Heritage</h3>
+        <svg class="menu" width="43" height="23" viewBox="0 0 43 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line y1="1.5" x2="43" y2="1.5" stroke="white" stroke-width="3" />
+          <line y1="11.5" x2="28" y2="11.5" stroke="white" stroke-width="3" />
+          <line y1="21.5" x2="16" y2="21.5" stroke="white" stroke-width="3" />
+        </svg>
+        <div class="nav-open">
+          <div class="contact">
+            <h3>Contact</h3>
+            <p>
+              <a href="mailto:ashleyrapuano@gmail.com" target="_top">Email</a>
+            </p>
+          </div>
+          <div class="social">
+            <h3>Social</h3>
+            <div id="social-links">
+              <img src="./images/Instagram.svg" alt="Instagram">
+              <img src="./images/Twitter.svg" alt="Twitter">
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- Car History  -->
       <div class="car-history">
         <div class="car-year">
           <h1>1973</h1>
         </div>
         <div id="car-history_img">
-          <img id="kenmeri-front" class="grid-img" src="./images/kenmeri-front.jpg" alt="profile">
+          <img id="kenmeri-front" class="grid-img" src="./images/kenmeri-front-regular.jpg" alt="profile">
         </div>
 
         <div class="overlay">
@@ -45,6 +70,7 @@
         </div>
       </div>
     </div>
+    <!-- Racing History -->
     <div class="racing-history">
       <div id="racing-history_img">
         <img class="grid-img" src="./images/kenmeri-73.jpg" alt="">
@@ -57,14 +83,13 @@
           races in the 1973 season. But soon after, the company decided to pull out of motorsports to focus on supplying
           the booming demand for small cars following the first oil crisis. The show car was restored in 2007.
         </p>
-        <p>
-          I graduated from the University of Nevada, Las Vegas with a BA in Stage and Screen Acting. In Las Vegas, I
-          completed courses in improvisation and clown at Vegas Theater Hub. I also trained in Mixed Martial Arts, did
-          burlesque, and stand-up.
-        </p>
       </div>
     </div>
   </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"
+    integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U=" crossorigin="anonymous"></script>
+  <script src="app.js"></script>
 </body>
 
 </html>
