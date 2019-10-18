@@ -3,6 +3,7 @@
   --horizontal-padding: 0 1.2rem;
   --base-padding: 3rem;
   --width: 1600px;
+  --grid-gap: 2rem;
   font-size: 15px;
 }
 
@@ -170,57 +171,93 @@ nav {
 }
 
 /* -------------------------------------------------------------------------- */
+/*                                 Navigation                                 */
+/* -------------------------------------------------------------------------- */
+
+nav a {
+  text-decoration: none;
+}
+
+.nav-open {
+  display: grid;
+  grid-template-columns: 5% 1fr 1fr 5%;
+  justify-items: center;
+  align-items: center;
+
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 50vh;
+  background: white;
+  z-index: 1;
+  color: black;
+  text-align: center;
+  transform: translateY(-100%);
+}
+
+.nav-open h3 {
+  font-size: 1.75rem;
+  padding-bottom: 40px;
+}
+
+.nav-open a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 1.125rem;
+}
+
+.contact {
+  grid-column: 2/3;
+}
+
+#social-links {
+  display: flex;
+  cursor: pointer;
+}
+
+#social-links img {
+  padding: 0px 10px;
+
+}
+
+#logo,
+.menu {
+  z-index: 99;
+  cursor: pointer;
+}
+
+/* -------------------------------------------------------------------------- */
 /*                                Car Page Styles                                */
 /* -------------------------------------------------------------------------- */
 
 .grid-left {
   display: grid; 
   grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 1fr 1fr;
 }
 
 #car-history_wrapper {
   background: black;
-  padding: 0 3rem;
 }
-
-/* .car-history {
-  display: grid;
-  grid-template-columns: min-content min-content 1fr 1fr;
-  grid-gap: 2rem;
-  justify-content: center;
-  justify-items: end;
-  align-items: center;
-
-  padding: var(--base-padding);
-  margin: auto;
-  color: white;
-  max-width: var(--width);
-} */
 
 .car-history {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  /* grid-template-rows: max-content; */
   grid-auto-rows: 1fr;
-  grid-gap: 2rem;
+  grid-gap: var(--grid-gap);
   align-items: center;
 
   padding: var(--base-padding);
   margin: auto;
   color: white;
   max-width: var(--width);
-}
-
-.grid-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
 .car-year {
   grid-column: 1;
   grid-row: 1;
-  align-self: start;
+  align-self: center;
   justify-self: end;
   
   font-size: 2rem;
@@ -234,8 +271,8 @@ nav {
 
 #car-history_img {
   grid-column: 2 / span 5;
-  grid-row: 1;
-  /* justify-self: stretch; */
+  grid-row: 1 / span 2;
+  align-self: center;
 }
 
 .overlay {
@@ -247,7 +284,6 @@ nav {
 .car-bio p,
 .racing-description p {
   font-size: 1.2rem;
-  width: 100%;
   padding: var(--vertical-padding);
 }
 
@@ -260,7 +296,7 @@ nav {
 .racing-history {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 1.2rem;
+  grid-gap: var(--grid-gap);
   justify-content: center;
   max-width: var(--width);
 
@@ -271,7 +307,6 @@ nav {
 
 #racing-history_img {
   align-self: center;
-  justify-self: center;
 }
 
 /* iframe {
@@ -291,7 +326,7 @@ nav {
   .grid-left {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: max-content 1fr 1fr max-content;
-    grid-gap: 1.2rem;;
+    grid-gap: var(--grid-gap);
     align-self: center;
   }
 
@@ -332,7 +367,6 @@ nav {
     grid-row: 2/3;
     grid-column: 2;
     text-align: center;
-    
   }
 
   .details h1 {
@@ -340,13 +374,14 @@ nav {
   }
 
   .car-history {
-    /* grid-template-columns: 1fr;
-    grid-template-rows: 1fr */
     display: block;
   }
 
   .grid-left {
+    grid-template-rows: 1fr;
     grid-template-columns: 1fr;
+    justify-items: center;
+
   }
 
   .car-year {
@@ -374,7 +409,8 @@ nav {
 
   .car-bio {
     grid-row: 1;
-    padding: var(--base-padding);
+    padding-top: 3rem;
+    /* text-align: center; */
   }
 
 /* ----------------------------- Racing History ----------------------------- */
@@ -431,55 +467,4 @@ nav {
   .slide {
     width: 7px;
   }
-}
-
-/* ------------------------------- Navigation ------------------------------- */
-
-.nav-open {
-  display: grid;
-  grid-template-columns: 5% 1fr 1fr 5%;
-  justify-items: center;
-  align-items: center;
-
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 50vh;
-  background: white;
-  z-index: 1;
-  color: black;
-  text-align: center;
-  transform: translateY(-100%);
-}
-
-.nav-open h3 {
-  font-size: 1.75rem;
-  padding-bottom: 40px;
-}
-
-.nav-open a {
-  text-decoration: none;
-  color: inherit;
-  font-size: 1.125rem;
-}
-
-.contact {
-  grid-column: 2/3;
-}
-
-#social-links {
-  display: flex;
-  cursor: pointer;
-}
-
-#social-links img {
-  padding: 0px 10px;
-
-}
-
-#logo,
-.menu {
-  z-index: 99;
-  cursor: pointer;
 }

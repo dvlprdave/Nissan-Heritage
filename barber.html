@@ -6,63 +6,102 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="./style.css">
-  <title>Ashley Rapuano</title>
+  <title>PGC10</title>
 </head>
 
 <body>
   <main>
-    <div id="banner">
-      <img id="banner-img" src="./images/barber-bg.jpg" alt="">
-      <div class="author">
-        <h1>Ashley Rapuano</h1>
-        <h3>Photographer</h3>
-      </div>
-    </div>
-    <div class="story">
-      <div class="story-description">
-        <h3>My story </h3>
-        <p>
-          Living in NYC (with my amazing partner, David, and our two rescue cats, Jester & Jynx), I am training at HB
-          Studios, Upright Citizen's Brigade and The People's Improv Theater. I train all around town with various
-          coaches. And I'm currently producing my own films. My google calendar is color coded and very busy, and I
-          love it!
-        </p>
-        <p>
-          I graduated from the University of Nevada, Las Vegas with a BA in Stage and Screen Acting. In Las Vegas, I
-          completed courses in improvisation and clown at Vegas Theater Hub. I also trained in Mixed Martial Arts, did
-          burlesque, and stand-up.
-        </p>
-      </div>
+    <div id="car-history_wrapper">
 
-      <div class="profile">
-        <img src="./images/barber-profile.jpg" alt="profile">
+      <!-- --------------------------------- Nav --------------------------------- -->
+
+      <nav>
+        <h3>
+          <a id="logo" href="./">Nissan Heritage</a>
+        </h3>
+        <svg class="menu" width="43" height="23" viewBox="0 0 43 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line y1="1.5" x2="43" y2="1.5" stroke="white" stroke-width="3" />
+          <line y1="11.5" x2="28" y2="11.5" stroke="white" stroke-width="3" />
+          <line y1="21.5" x2="16" y2="21.5" stroke="white" stroke-width="3" />
+        </svg>
+        <div class="nav-open">
+          <div class="contact">
+            <h3>Contact</h3>
+            <p>
+              <a href="mailto:ashleyrapuano@gmail.com" target="_top">Email</a>
+            </p>
+          </div>
+          <div class="social">
+            <h3>Social</h3>
+            <div id="social-links">
+              <img src="./images/Instagram.svg" alt="Instagram">
+              <img src="./images/Twitter.svg" alt="Twitter">
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- ----------------------------- Car History ----------------------------- -->
+
+      <div class="car-history">
+        <div class="grid-left">
+          <div class="car-year">
+            <h1>1970</h1>
+          </div>
+          <div id="car-history_img">
+            <img id="kenmeri-front" class="grid-img" src="./images/pgc10-side.jpg" alt="profile">
+          </div>
+
+          <div class="overlay">
+            <img class="grid-img" src="./images/pgc10-rear.jpg" alt="profile">
+          </div>
+        </div>
+
+        <!-- ------------------------------- Car Bio ------------------------------- -->
+
+        <div class="car-bio">
+          <h3 class="car-bio__heading">PGC10</h3>
+          <p>
+            Nissan combined its best technologies and produced “Skyline 2000GT-R” in February 1969 after merging with
+            Prince Motors, Ltd. “GT-R” was a high performance car produced for touring car races. The know-how for
+            prototype race car "R380" was filled in an ordinary looking sedan body*. Mounted was the 4-valve DOHC engine
+            re-engineered from the one for R380 to suit production cars.
+
+          </p>
+          <p>
+            It made a debut and won at “JAF GP” in May 1969, 3 months after the rollout. Since then, it kept winning
+            until it attained 52 victories before the Nissan works team withdrew in October 1972.
+          </p>
+        </div>
       </div>
     </div>
-    <div class="my-work">
-      <div class="work-description">
-        <h3>My story </h3>
+
+    <!-- --------------------------- Racing History ---------------------------- -->
+
+    <div class="racing-history">
+      <div id="racing-history_img">
+        <img class="grid-img" src="./images/pgc10-racing.jpg" alt="">
+      </div>
+      <div class="racing-description">
+        <h3 class="racing-description_heading">Racing History </h3>
         <p>
-          Living in NYC (with my amazing partner, David, and our two rescue cats, Jester & Jynx), I am training at HB
-          Studios, Upright Citizen's Brigade and The People's Improv Theater. I train all around town with various
-          coaches. And I'm currently producing my own films. My google calendar is color coded and very busy, and I
-          love it!
+          The second-generation Skyline, the C110, was introduced at the 19th Tokyo Motor Show as the "Skyline 2000GT-R
+          Racing Concept." The #73 was a reference to the fact that Nissan's works team planned to participate in 73
+          races in the 1973 season. But soon after, the company decided to pull out of motorsports to focus on supplying
+          the booming demand for small cars following the first oil crisis. The show car was restored in 2007.
         </p>
         <p>
           I graduated from the University of Nevada, Las Vegas with a BA in Stage and Screen Acting. In Las Vegas, I
           completed courses in improvisation and clown at Vegas Theater Hub. I also trained in Mixed Martial Arts, did
           burlesque, and stand-up.
         </p>
-      </div>
-      <div id="work-gallery">
-        <img src="./images/barber-gallery-1.jpg" alt="">
-        <img src="./images/barber-gallery-2.jpg" alt="">
-        <img src="./images/barber-gallery-3.jpg" alt="">
-        <img src="./images/barber-gallery-4.jpg" alt="">
-        <img src="./images/barber-gallery-5.jpg" alt="">
-        <img src="./images/barber-gallery-6.jpg" alt="">
       </div>
     </div>
   </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"
+    integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U=" crossorigin="anonymous"></script>
+  <script src="app.js"></script>
 </body>
 
 </html>
