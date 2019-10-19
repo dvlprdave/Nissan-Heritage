@@ -18,5 +18,8 @@
   "dependencies": {
     "autoprefixer": "^9.6.5",
     "postcss-modules": "^1.4.1"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
   }
 }
