@@ -1,0 +1,16 @@
+{
+  "name": "nissan-heritage",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "David Quick",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^9.6.5",
+    "postcss-modules": "^1.4.1"
+  }
+}

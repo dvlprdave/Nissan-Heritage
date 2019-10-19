@@ -17,12 +17,12 @@
 
 @font-face {
   font-family: PopLight;
-  src: url('./fonts/Poppins-Light.ttf')
+  src: url('/Poppins-Light.aa273572.ttf')
 }
 
 @font-face {
   font-family: PopReg;
-  src: url('./fonts/Poppins-Regular.ttf')
+  src: url('/Poppins-Regular.afe0ffc8.ttf')
 }
 
 body {
@@ -462,3 +462,5 @@ nav a {
     width: 7px;
   }
 }
+
+/*# sourceMappingURL=/style.e308ff8e.css.map */
