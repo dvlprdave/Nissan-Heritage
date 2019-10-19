@@ -437,10 +437,6 @@ nav a {
     padding-right: 20px;
   }
 
-  .slide {
-    width: 9px;
-  }
-
   .hero img {
     height: 300px;
   }
@@ -452,7 +448,7 @@ nav a {
 
 /* -------------------- Narrow Mobile Screens (Galaxy s9) ------------------- */
 
-@media screen and (max-width: 375px) {
+/* @media screen and (max-width: 375px) {
   .page-1 h3 {
     font-size: 1rem;
     padding-right: 10px;
@@ -461,4 +457,4 @@ nav a {
   .slide {
     width: 7px;
   }
-}
+} */
