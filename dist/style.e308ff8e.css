@@ -153,11 +153,21 @@ nav {
 }
 
 .pages svg:hover {
-  animation: dot 0.5s ease-in-out infinite alternate;
+  -webkit-animation: dot 0.5s ease-in-out infinite alternate;
+          animation: dot 0.5s ease-in-out infinite alternate;
 }
 
 .pages svg.active {
   opacity: 1;
+}
+
+@-webkit-keyframes dot {
+  0% {
+    transform: scale(2);
+  }
+  100% {
+    transform: scale(4);
+  }
 }
 
 @keyframes dot {
@@ -261,7 +271,9 @@ nav a {
   
   font-size: 2rem;
   font-weight: 800;
-  writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
   color: white;
   margin-top: 1em;
   z-index: 99;
@@ -320,6 +332,7 @@ nav a {
 
   .grid-left {
     grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: -webkit-max-content 1fr 1fr -webkit-max-content;
     grid-template-rows: max-content 1fr 1fr max-content;
     grid-gap: var(--grid-gap);
     align-self: center;
@@ -381,7 +394,9 @@ nav a {
 
   .car-year {
     grid-row: 1;
-    writing-mode: horizontal-tb;
+    -webkit-writing-mode: horizontal-tb;
+        -ms-writing-mode: lr-tb;
+            writing-mode: horizontal-tb;
     font-size: 1.5rem;
     justify-self: center;
     margin: 0;

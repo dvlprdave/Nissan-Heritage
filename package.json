@@ -4,6 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
+    "dev": "parcel index.html fairlazyz.html kenmeri.html pgc10.html ",
+    "build": "parcel build index.html fairlazyz.html kenmeri.html pgc10.html ",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
