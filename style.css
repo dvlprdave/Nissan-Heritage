@@ -261,6 +261,9 @@ nav a {
   z-index: 99;
 }
 
+.grid-img {
+  width: 100%;
+}
 
 .car-history_img {
   grid-column: 2 / span 5;
@@ -429,16 +432,13 @@ nav a {
     padding-right: 20px;
   }
 
-  .pages {
-  }
-
   .hero img {
     height: 300px;
     width: auto;
   }
 
   .details h2 {
-    font-size: 28px;
+    font-size: 2.350rem;
   }
 }
 
