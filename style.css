@@ -29,12 +29,6 @@ body {
   font-family: PopLight;
 }
 
-img {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
 #portfolio {
   color: white;
   background: radial-gradient(rgba(43,55,96,1), rgba(11,16,35,1));
@@ -360,7 +354,7 @@ nav a {
 
   .details {
     grid-row: 2/3;
-    grid-column: 2;
+    grid-column: 2/3;
     text-align: center;
   }
 
@@ -407,8 +401,6 @@ nav a {
     padding-top: 3rem;
   }
 
-/* ----------------------------- Racing History ----------------------------- */
-
   .racing-history {
     display: grid;
     grid-template-columns: 1fr;
@@ -429,7 +421,7 @@ nav a {
 
 @media screen and (max-width: 768px) {
   .page {
-    grid-template-rows: 1fr 100%;
+    grid-template-rows: 1fr;
   }
 
   .page-1 h3 {
@@ -437,8 +429,12 @@ nav a {
     padding-right: 20px;
   }
 
+  .pages {
+  }
+
   .hero img {
     height: 300px;
+    width: auto;
   }
 
   .details h2 {
@@ -448,7 +444,7 @@ nav a {
 
 /* -------------------- Narrow Mobile Screens (Galaxy s9) ------------------- */
 
-/* @media screen and (max-width: 375px) {
+@media screen and (max-width: 375px) {
   .page-1 h3 {
     font-size: 1rem;
     padding-right: 10px;
@@ -457,4 +453,4 @@ nav a {
   .slide {
     width: 7px;
   }
-} */
+}
