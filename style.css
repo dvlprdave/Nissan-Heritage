@@ -441,6 +441,9 @@ nav a {
 /* -------------------- Narrow Mobile Screens (Galaxy s9) ------------------- */
 
 @media screen and (max-width: 375px) {
+  .page {
+    grid-template-rows: 1fr auto;
+  }
   .page-1 h3 {
     font-size: 1rem;
     padding-right: 10px;
