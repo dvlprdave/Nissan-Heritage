@@ -55,8 +55,8 @@ nav {
   min-height: 90vh;
 }
 
-.about,
-.reel {
+.page-pgc10,
+.page-240z {
   position: absolute;
   bottom: 0%;
   left: 0%;
@@ -423,10 +423,6 @@ nav a {
 }
 
 @media screen and (max-width: 768px) {
-  .page {
-    grid-template-rows: 1fr;
-  }
-
   .page-1 h3 {
     font-size:  1.125rem;
     padding-right: 20px;
