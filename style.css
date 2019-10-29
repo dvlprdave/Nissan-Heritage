@@ -423,6 +423,10 @@ nav a {
 }
 
 @media screen and (max-width: 768px) {
+  .page {
+    grid-template-rows: 1fr auto;
+  }
+
   .page-1 h3 {
     font-size:  1.125rem;
     padding-right: 20px;
@@ -436,20 +440,8 @@ nav a {
   .details h2 {
     font-size: 2.350rem;
   }
-}
-
-/* -------------------- Narrow Mobile Screens (Galaxy s9) ------------------- */
-
-@media screen and (max-width: 375px) {
-  .page {
-    grid-template-rows: 1fr auto;
-  }
-  .page-1 h3 {
-    font-size: 1rem;
-    padding-right: 10px;
-  }
 
   .slide {
-    width: 7px;
+    width: 10px;
   }
 }
