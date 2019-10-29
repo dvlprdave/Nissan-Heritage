@@ -55,6 +55,10 @@ nav {
   min-height: 90vh;
 }
 
+.page-kenmeri {
+  position: relative;
+}
+
 .page-pgc10,
 .page-240z {
   position: absolute;
@@ -442,6 +446,6 @@ nav a {
   }
 
   .slide {
-    width: 10px;
+    width: 8px;
   }
 }
